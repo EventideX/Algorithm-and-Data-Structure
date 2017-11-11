@@ -16,10 +16,10 @@ int p(int l, int r)
 	s = 0;
 	l += m - 1;
 	r += m + 1;
-	while ((l^r != 1) && (l != r))
+	while ((l ^ r) != 1)
 	{
-		if (l & 1 == 0) s += a[l ^ 1];
-		if (r & 1 == 1) s += a[r ^ 1];
+		if ((l & 1) == 0) s += a[l ^ 1];
+		if ((r & 1) == 1) s += a[r ^ 1];
 		l >>= 1;
 		r >>= 1;
 	}
